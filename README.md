@@ -1,4 +1,2 @@
-# AtomicPrograms
-Programs made with the AtomicGameEngine
-
-These programs are in source form, MIT licensed.
+# GameFarm
+A place for open source games and apps. MIT licensed.
