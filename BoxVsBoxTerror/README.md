@@ -1,4 +1,4 @@
-###Box vs Box Terror 
+### Box vs Box Terror 
 by JimMarlowe
 
 MIT Licensed
@@ -16,12 +16,12 @@ unzip and load LinuxJam2017.atomic into the Atomic Game Engine editor and play.
 
 Dispite it's name, it will run on all platforms. It was created completely on the Linux platform using AGE, gimp, audacity (and a Galaxy S4 to capture textures and audio). The only things used "stock" were the box, torus and dome models, which are from Urho3D.
 
-####The Story :
+#### The Story :
 A big crate of service boxes has broken open, and you have to attach "control donuts" to the scattering and wonky service boxes as quickly as possible. Those who finish fastest wins!
 
 Hint: if you run out of ammo (well, donuts), there are some pickups around to replenish the supply.
 
-####Controls :
+#### Controls :
 + WSAD or Arrow keys to move.
 + Mouse button 3 moves forward.
 + Left Shift for Speed.
