@@ -1,7 +1,7 @@
 ### ASounding noise masking app
 by JimMarlowe
 
-Just unzip and load ASounding.atomic and run in the AtomicEditor, and you can depoly to your favorite platform, works on desktop and mobile.
+Just unzip and load ASounding.atomic and run in the AtomicEditor, and you can deploy to your favorite platform, works on desktop and mobile.
 
 ### This program is ASounding
  Not to be confused with astounding :) and was created to generate masking sounds to overwhelm bad or missing environmental noises. Like, if you want to sleep and you're in a strange place, isn't that always the way?
