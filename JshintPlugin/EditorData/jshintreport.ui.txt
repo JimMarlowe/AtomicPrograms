@@ -1,0 +1,11 @@
+# jshint plugin user interface, such as it is.
+# JimMarlowe, 2017, MIT license
+TBLayout: axis: y, size: available, position: gravity, distribution: gravity
+	lp: min-width: 800, min-height: 400
+	TBLayout: distribution: gravity, distribution-position: left
+		TBEditField: id: "jshintreporttext", multiline: 1, styling: 0, gravity: all, readonly: 1, adapt-to-content: 0, text: "jshint results"
+			font: size: 12dp
+			lp: min-width: 800
+	TBButton: text: "OK", id: "jshintok"
+		font: size: 16dp
+
