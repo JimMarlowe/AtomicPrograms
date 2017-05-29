@@ -8,6 +8,9 @@ You can start with SimpleApp or try the C++ FeatureExamples.
 
 It is presently for linux.
 
+## SDK Generation
+The file `SdkGeneration.zip` contains the script(s) to create an SDK from an Atomic Game Engine source build.
+
 ### mksdk.sh
 This is the script that creates the SDK from a built version of the Atomic Game Engine, since it uses that to copy the files. 
 There are 2 required arguments, and one optional arguments to the script.
@@ -22,20 +25,26 @@ As a bonus, it also copies the C++ FeatureExamples that can use the SDK to compi
 
 So the basic command would be `./mksdk.sh /path/to/AtomicGameEngine /path/to/mysdk`
 
-and with docs `./mksdk.sh /path/to/AtomicGameEngine /path/to/mysdk /path/to/Doxyfile.age`
+And with docs `./mksdk.sh /path/to/AtomicGameEngine /path/to/mysdk /path/to/Doxyfile.age`
 
 ### Doxyfile.age
-To use this file, copy it to your computer, and note it's location, so it can be used as the 3rd argument to the mkdsk script, if you want documentation included.
+To use this file, copy it to your computer, and note it's location, so it can be used as the 3rd argument to the `mkdsk.sh` script, if you want documentation included.
 This is the same doxygen that the Atomic Game Engine build uses, except it has the OUTPUT_DIRECTORY commented out, so it can be appended to the file, to get the documentation inside the SDK. This documentation will match the API that the build uses.
 
 ## SimpleApp
+The file `SimpleApp.zip` contains all files necessary to make and run the SimpleApp.
+
 This is a bare bones Atomic C++ program that is intended to be used with an AtomicSDK. This is a program without scripting support, so only the c++ parts of Atomic will be accessable.
-The file `SimpleApp.zip` contains all files necessary to make and run the SimpleApp. 
+
 To start with the SimpleApp, unzip `SimpleApp.zip` onto your computer. Go into the SimpleApp directory, and change the Makefile to aim it at the location of the SDK in order to compile for the line `ATOMICSDK := /Path/to/AtomicSDK`, then in a terminal, type `make`.
 When it completes, it will produce the file `SimpleApp.bin`. To run the file, you can use the script `./run.sh  /path/to/atomic` and wonderous things should appear.
-The source code has comments where to add the user code. For more examples of what is possible, see the C++ FeatureExamples source codes.
+
+The source code has comments where to add the user code and a function `SimpleApp::DoSomething()`. For more examples of what is possible, see the C++ FeatureExamples source codes.
+
+
 
 ## Additional files for the C++ FeatureExamples
+The file `FeatureExampleFiles.zip` contains the two files to copy into the `SDK/CPlusPlus` directory to allow it to use the SDK.
 
 ### Makefile
 This is a linux makefile created specifically to compile the C++ FeatureExamples with the SDK. 
