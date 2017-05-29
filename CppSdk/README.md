@@ -4,6 +4,7 @@
 I made this because sometimes I need to make a C++ Atomic Game Engine program, to get around scripting API holes, use VariantMaps or perhaps to get the most speed.
 
 What it produces, is a self-contained environment that can used to develop C++ games and applications. Then, it's just you, a compiler and an include and lib directories, which will be familiar to C++ developers.
+You can start with SimpleApp or try the C++ FeatureExamples.
 
 It is presently for linux.
 
@@ -27,7 +28,14 @@ and with docs `./mksdk.sh /path/to/AtomicGameEngine /path/to/mysdk /path/to/Doxy
 To use this file, copy it to your computer, and note it's location, so it can be used as the 3rd argument to the mkdsk script, if you want documentation included.
 This is the same doxygen that the Atomic Game Engine build uses, except it has the OUTPUT_DIRECTORY commented out, so it can be appended to the file, to get the documentation inside the SDK. This documentation will match the API that the build uses.
 
-## Files for the C++ FeatureExamples
+## SimpleApp
+This is a bare bones Atomic C++ program that is intended to be used with an AtomicSDK. This is a program without scripting support, so only the c++ parts of Atomic will be accessable.
+The file `SimpleApp.zip` contains all files necessary to make and run the SimpleApp. 
+To start with the SimpleApp, unzip `SimpleApp.zip` onto your computer. Go into the SimpleApp directory, and change the Makefile to aim it at the location of the SDK in order to compile for the line `ATOMICSDK := /Path/to/AtomicSDK`, then in a terminal, type `make`.
+When it completes, it will produce the file `SimpleApp.bin`. To run the file, you can use the script `./run.sh  /path/to/atomic` and wonderous things should appear.
+The source code has comments where to add the user code. For more examples of what is possible, see the C++ FeatureExamples source codes.
+
+## Additional files for the C++ FeatureExamples
 
 ### Makefile
 This is a linux makefile created specifically to compile the C++ FeatureExamples with the SDK. 
