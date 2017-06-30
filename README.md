@@ -1,6 +1,10 @@
 # GameFarm
 A place for open source games and apps. MIT licensed.
 
+## Utility: PK3 Map Converter
+This program converts a Q3 style PK3 maps to wavefront/.obj, collada/.dae, irrMesh, STereoLithography/.stl and Polygon File Format/.ply.
+Cross platform, made with [Irrlicht](http://irrlicht.sourceforge.net/), distributed as source code, Zlib license.
+![MapConverter](https://github.com/JimMarlowe/GameFarm/raw/master/MapConverter/mapconverter.jpg)
 
 
 ## Utility: Rogue Atomic Game Engine C++ SDK (Linux)
