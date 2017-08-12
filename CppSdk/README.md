@@ -1,6 +1,8 @@
 # Rogue Atomic Game Engine C++ SDK
 #### (For the linux platform)
 
+**Updated Aug12 2017** add imgui lib, and new flexibility in SDK generation, including Saving it in the Atomic Game Engine deployment area.
+
 **Updated Jun11 2017** the SDK now generates a Core resources pak file, called BaseResources.pak, to be completely independent from an Atomic build. The SimpleApp has been modified to use this file.
 
 I made this because sometimes I need to make a C++ Atomic Game Engine program, to get around scripting API holes, use VariantMaps or perhaps to get the most speed.
@@ -15,25 +17,35 @@ The file `SdkGeneration.zip` contains the script(s) to create an SDK from an Ato
 
 ### mksdk.sh
 This is the script that creates the SDK from a built version of the Atomic Game Engine, since it uses that to copy the files. 
-There are 2 required arguments, and one optional arguments to the script.
 
-The first argument is the pathname to the target Atomic Game Engine build.
+The command line arguments are :
 
-The second argument is the pathname of the SDK you want to create, this name can be whatever you choose.
+To set the path to the Atomic Game Engine use : -a /path/to/atomic or --atomic-path /path/to/atomic  or -a=/path/to/atomic  or --atomic-path=/path/to/atomic  (this is a manditory setting)
 
-The third (optional) argument is the location of a [doxygen](www.doxygen.org) file to use, if you want C++ API documents to be generated.
+To set the SDK path use -s /path/to/SDK or --sdk-path value or -s=value or --sdk-path=value, note, that if you are using the move command, you technically do not have to provide an SDK path, a default SDK will be created in /tmp for you.
 
-As a bonus, it also copies the C++ FeatureExamples that can use the SDK to compile, and run (see Makefile and run.sh).
+To generate Doxygen documentation, set the pathname to the Doxyfile.age as -d /path/to/Doxyfile.age or --doxygen-file value or -d=value or --doxygen-file=value
 
-So the basic command would be `./mksdk.sh /path/to/AtomicGameEngine /path/to/mysdk`
+To create a zip file of the SDK, when assembly is completed, use either -z or --zip, the zip file will be in the same directory that the SDK was created in.
 
-And with docs `./mksdk.sh /path/to/AtomicGameEngine /path/to/mysdk /path/to/Doxyfile.age`
+To move SDK into Atomic Game Engine when assembly is completed, use either -m or --move, the destination will be
+ /path/to/atomic/Artifacts/AtomicEditor/Resources/ToolData/Deployment/SDK
+
+To include C++ examples with the SDK, use either -e or --examples
+
+The basic command to create an SDK is  `./mksdk.sh -a /path/to/AtomicGameEngine -s /path/to/mysdk`
+
+And an SDK with docs `./mksdk.sh -a /path/to/AtomicGameEngine -s /path/to/mysdk -d /path/to/Doxyfile.age`
+
+And SDK (with docs) back into Atomic `./mksdk.sh -m -a /path/to/AtomicGameEngine -d /path/to/Doxyfile.age`
+
 
 ### Doxyfile.age
 To use this file, copy it to your computer, and note it's location, so it can be used as the 3rd argument to the `mkdsk.sh` script, if you want documentation included.
 This is the same doxygen that the Atomic Game Engine build uses, except it has the OUTPUT_DIRECTORY commented out, so it can be appended to the file, to get the documentation inside the SDK. This documentation will match the API that the build uses.
 
-## SimpleApp
+## SimpleApp Template
+
 The file `SimpleApp.zip` contains all files necessary to make and run the SimpleApp.
 
 This is a bare bones Atomic C++ program that is intended to be used with an AtomicSDK. This is a program without scripting support, so only the c++ parts of Atomic will be accessable.

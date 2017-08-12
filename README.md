@@ -9,7 +9,7 @@ Cross platform, made with [Irrlicht](http://irrlicht.sourceforge.net/), distribu
 
 ## Utility: Rogue Atomic Game Engine C++ SDK (Linux)
 Minimalist C++ development environment, for those who say "I know what I'm doing".
-
+ **Updated Aug12 2017** with new, more flexible SDK generator.
 
 ## Utility: jshint Plugin
 Validate your Javascript (and Typescript) code from within the AtomicEditor with jshint.
