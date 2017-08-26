@@ -1,6 +1,6 @@
 # Commando C++ Plugin
 ### Made for the Rogue Atomic Game Engine C++ SDK (Linux)
-![CommandsTab](https://github.com/JimMarlowe/GameFarm/raw/master/CppPlugin/cppplugin1.png)
+![CommandsTab](https://github.com/JimMarlowe/GameFarm/raw/master/CppPlugin/cppplug1.png)
 
 This is an AtomicEditor plugin that takes advantage of the C++ project organization and Rogue C++ SDK, and provides a way to do full toolchain, Just Code(TM) work.
 The AtomicEditor integration isn't great, so the Commando C++ Plugin is used for most functions, we're rogue and now commando, remember? 
@@ -99,7 +99,7 @@ Also added is a Build directory in the project directory, at the same level as C
 And an SDK-Build directory in the project directory to put the executable being built.
   
 ####  Commands Tab
-  ![CommandsTab](https://github.com/JimMarlowe/GameFarm/raw/master/CppPlugin/cppplugin1.png)
+  ![CommandsTab](https://github.com/JimMarlowe/GameFarm/raw/master/CppPlugin/cppplug1.png)
   
  * Run    Ctrl+F5 - This button will build and run the current project
  * Build  Ctrl+F6 - This just builds the project.
@@ -114,19 +114,19 @@ The console area is used to give status on the commands.
 The little thing on the right side allows you to change the upper and lower viewing area sizes.
 
 #### Files Tab
-  ![FilesTab](https://github.com/JimMarlowe/GameFarm/raw/master/CppPlugin/cppplugin2.png)
+  ![FilesTab](https://github.com/JimMarlowe/GameFarm/raw/master/CppPlugin/cppplug2.png)
 
 This lists all the cpp files in the project. They can be viewed and editted by selecting the file and pressing the "Edit Selected File" button.
   
 #### Setup Tab
-  ![SetupTab](https://github.com/JimMarlowe/GameFarm/raw/master/CppSdk/cppplugin3.png)
+  ![SetupTab](https://github.com/JimMarlowe/GameFarm/raw/master/CppPlugin/cppplug3.png)
 
  * File Edit Command - this is a command to execute an editor. it presently defaults to gedit, this option is saved.
  * SDK Path - location of an SDK, currently aimed at the embedded rogue SDK, this option is saved.
  * Save Settings - this saves the values to be available next time the plugin is brought up.
       
 #### Examples Tab
-  ![ExamplesTab](https://github.com/JimMarlowe/GameFarm/raw/master/CppPlugin/cppplugin4.png)
+  ![ExamplesTab](https://github.com/JimMarlowe/GameFarm/raw/master/CppPlugin/cppplug4.png)
   
 Select an example and press  "Install Selected Example..." button, then select the destination directory, and on OK, will
 install the ready to use example.
