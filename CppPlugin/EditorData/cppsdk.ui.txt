@@ -1,0 +1,60 @@
+# cppsdk plugin user interface layout file
+# JimMarlowe, 2017
+TBLayout: axis: x,  size: available, distribution: available
+	lp: min-height: 400, min-width: 800
+#===================================================
+	TBLayout: axis: y, size: available, position: gravity, distribution: gravity, id: "movertop"
+		TBTabContainer: gravity: all, id: "SDKTabContainer"
+			tabs
+				TBButton: text: "Commands:
+				TBButton: text: "Files"
+				TBButton: text: "Setup"
+				TBButton: text: "Examples"
+			TBLayout: axis: x, position: gravity, distribution: available, id: "SDKTabLayout1"
+				TBButton: text: "Run  Ctrl+F5", id: "cppsdkrun"
+				TBButton: text: "Build  Ctrl+F6", id: "cppsdkcompile"
+				TBButton: text: "Clear Log", id: "cppsdkclear"
+				TBButton: text: "Clean", id: "cppsdkclean"
+				TBButton: text: "CMake", id: "cppsdkcmake"
+				TBButton: text: "Deploy", id: "cppsdkdeploy"
+				TBButton: text: "Help...  Ctrl+F1", id: "cppsdkhelp"
+			TBLayout: axis: y, size: available, distribution: available, id: "SDKTabLayout2"
+				TBLayout: distribution: gravity
+					TBTextField: text: "Project Files"
+					TBWidget: gravity: left right
+					TBButton: text: "Edit Selected File...  Ctrl+F7", id: "cppsdkeditfile"
+				TBLayout: size: available, position: gravity, distribution: available
+					gravity: left right
+					TBSelectList: id: cppfilelist
+			TBLayout: axis: y, size: available, distribution: available, id: "SDKTabLayout3"
+				TBLayout: distribution: gravity
+					TBTextField: text: "File Edit Cmd", gravity: left
+					TBEditField: id: fileeditcmd, text: "", gravity: left right
+				TBLayout: distribution: gravity
+					TBButton: id: findsdkpath, text: "SDK path...", gravity: left
+					TBEditField: id: sdkpath, text: "", gravity: left right
+				TBLayout: distribution: gravity
+					TBButton: id: savesettings, text: "Save Settings", gravity: left right
+				TBWidget:
+					gravity: all
+			TBLayout: axis: y, size: available, position: gravity, distribution: available, id: "SDKTabLayout4"
+				TBLayout: distribution: gravity
+					TBTextField: text: "Examples"
+					TBWidget: gravity: left right
+					TBButton: text: "Install Selected Example...", id: "cppsdkinstall"
+				TBLayout: size: available, position: gravity, distribution: available
+					gravity: left right
+					TBSelectList: id: sdkexamplelist
+# ==========================================
+		TBLayout: distribution: gravity, distribution-position: left, id: "moverbot"
+			TBEditField: id: "cppsdklog", multiline: 1, styling: 0, gravity: all, readonly: 1, adapt-to-content: 0, text: "cppsdk log"
+				font: size: 14dp
+		TBButton: text: "OK", id: "cppsdkok"
+			font: size: 16dp
+	TBLayout: distribution: gravity, axis: y
+		TBWidget:
+			lp: min-height: 60
+		TBSlider: min: 160, max: 400, value: 200, id: moverslider, axis: y
+		TBWidget:
+			lp: min-height: 60
+

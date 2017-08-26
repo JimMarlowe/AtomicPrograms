@@ -1,6 +1,14 @@
 # GameFarm
 A place for open source games and apps. MIT licensed.
 
+## Utility: Commando C++ Plugin (Linux)
+This is a vision of how to implement a Just Code(tm) C++ SDK flavor, all wrapped up in a AtomicEditor plugin.
+It's for linux, again, and builds upon the Rogue Atomic Game Engine C++ SDK to do development thru deployment of C++ code. Includes example projects!
+
+![CommandsTab](https://github.com/JimMarlowe/GameFarm/raw/master/CppPlugin/cppplugin1.png)
+
+
+
 ## Utility: PK3 Map Converter
 This program converts a Q3 style PK3 maps to wavefront/.obj, collada/.dae, irrMesh, STereoLithography/.stl and Polygon File Format/.ply.
 Cross platform, made with [Irrlicht](http://irrlicht.sourceforge.net/), distributed as source code, Zlib license.
