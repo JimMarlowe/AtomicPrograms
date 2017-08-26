@@ -37,7 +37,7 @@ The basic command to create an SDK is  `./mksdk.sh -a /path/to/AtomicGameEngine 
 
 And an SDK with docs `./mksdk.sh -a /path/to/AtomicGameEngine -s /path/to/mysdk -d /path/to/Doxyfile.age`
 
-And SDK (with docs) back into Atomic `./mksdk.sh -m -a /path/to/AtomicGameEngine -d /path/to/Doxyfile.age`
+And embed SDK (with docs) back into Atomic `./mksdk.sh -m -a /path/to/AtomicGameEngine -d /path/to/Doxyfile.age`
 
 
 ### Doxyfile.age

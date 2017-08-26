@@ -1,0 +1,38 @@
+# Just Code C++ CmakeLists.txt template file    
+cmake_minimum_required(VERSION 2.8)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+PROJECT(atomicgame)
+
+#=Variables changed by the plugin===============================
+SET(SDK_DIR "")
+SET(EXECUTABLE_NAME "")
+SET(EXECUTABLE_OUTPUT_PATH "")
+
+#=no edits are required below this line ========================
+SET(SDK_LIB_DIR "${SDK_DIR}/lib")
+SET(SDK_INC_DIR "${SDK_DIR}/include")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wno-invalid-offsetof -Wno-warn-absolute-paths")
+FILE(GLOB SRCS "../Components/*.cpp" "../Scripts/*.cpp" "../Modules/*.cpp")
+FILE(GLOB MYLIBS "${SDK_DIR}/lib/*.a")
+include_directories("${SDK_INC_DIR}")
+include_directories("${SDK_INC_DIR}/Atomic")
+include_directories("${SDK_INC_DIR}/AtomicApp")
+include_directories("${SDK_INC_DIR}/AtomicEditor")
+include_directories("${SDK_INC_DIR}/AtomicJS")
+include_directories("${SDK_INC_DIR}/AtomicNET")
+include_directories("${SDK_INC_DIR}/AtomicPlayer")
+include_directories("${SDK_INC_DIR}/AtomicPlayerJS")
+include_directories("${SDK_INC_DIR}/AtomicTool")
+include_directories("${SDK_INC_DIR}/AtomicWebView")
+include_directories("${SDK_INC_DIR}/ThirdParty")
+include_directories("${SDK_INC_DIR}/ThirdParty/Box2D")
+include_directories("${SDK_INC_DIR}/ToolCore")
+include_directories("${SDK_INC_DIR}/Tools")
+include_directories("../Scripts")
+include_directories("../Components")
+include_directories("../Modules")
+ADD_EXECUTABLE("${EXECUTABLE_NAME}" "${SRCS}")
+TARGET_LINK_LIBRARIES("${EXECUTABLE_NAME}" "${MYLIBS}" pthread rt m GL c X11 dl "${SDK_DIR}/lib2/libssl.a" "${SDK_DIR}/lib2/libcrypto.a"  )
+
