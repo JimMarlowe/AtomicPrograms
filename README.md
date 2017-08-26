@@ -5,7 +5,7 @@ A place for open source games and apps. MIT licensed.
 This is a vision of how to implement a Just Code(tm) C++ SDK flavor, all wrapped up in a AtomicEditor plugin.
 It's for linux, again, and builds upon the Rogue Atomic Game Engine C++ SDK to do development thru deployment of C++ code. Includes example projects!
 
-![CommandsTab](https://github.com/JimMarlowe/GameFarm/raw/master/CppPlugin/cppplugin1.png)
+![CommandsTab](https://github.com/JimMarlowe/GameFarm/raw/master/CppPlugin/cppplug1.png)
 
 
 
