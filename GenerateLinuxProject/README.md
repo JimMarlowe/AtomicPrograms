@@ -7,14 +7,14 @@ This script will generate (compile) a project for the current version of [Torque
 
 ### How to install
 
-Copy the GenerateLinuxProject.sh script into the top level Torque3D directory, where the Engine, My Projects, Templates and Tools directories are found. That's it!
+Download the GenerateLinuxProject.sh script an place it into the top level Torque3D directory, where the Engine, My Projects, Templates and Tools directories are found. That's it!
 
 
 ### Running the script
 
 The command line options and arguments are :
 
-**`./GenerateLinuxProject.sh projectname "optional cmake arguments"`**
+**`./generateLinuxProject.sh projectname "optional cmake arguments"`**
 
 **projectname** is the name for your project, choose wisely, and if you have spaces in the name, use quotes around it.
 
@@ -34,15 +34,15 @@ Remember to use quotes around pathname that contain spaces on linux.
 Note: For me, I have to add some cmake args to stop it from going into the weeds, you probably won't have to.
 And you may pick a more imaginative project name than "projectname".
 
-`./GenerateLinuxProject.sh myproject "-DVIDEO_MIR=OFF" `
+`./generateLinuxProject.sh myproject "-DVIDEO_MIR=OFF" `
 
 For everyone else ...
 
-`./GenerateLinuxProject.sh myproject `
+`./generateLinuxProject.sh myproject `
 
 If you want to look at the build log later, do this ...
 
-`./GenerateLinuxProject.sh myproject >& buildlog.txt`
+`./generateLinuxProject.sh myproject >& buildlog.txt`
 
 
 ### Outro
